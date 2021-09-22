@@ -22,10 +22,11 @@ const events = [
 const CalendarScreen = () => {
   const eventStyleGetter = (event, start, end, isSelected) => {
     const style = {
-      backgroundColor: "#f0ad4e",
+      backgroundColor: "#367CF7",
       borderRadius: "0px",
       opacity: 0.8,
-      color: "black",
+      display: "block",
+      color: "white",
       border: "0px",
     };
     return {
