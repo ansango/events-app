@@ -9,13 +9,13 @@ const myEventsList = [
   {
     start: moment().toDate(),
     end: moment().add(1, "hours").toDate(),
-    title: "Event 1",
+    title: "Cumpleaños",
   },
 ];
 
 const CalendarScreen = () => {
   return (
-    <div>
+    <div className="calendar-screen">
       <Navbar />
       <Calendar
         localizer={localizer}
