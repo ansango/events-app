@@ -9,6 +9,7 @@ import "moment/locale/es";
 import { messages } from "../../helpers/calendar-msg";
 import CalendarEvent from "./CalendarEvent";
 import { useState } from "react";
+import CalendarModal from "./CalendarModal";
 
 moment.locale("es");
 
@@ -71,6 +72,7 @@ const CalendarScreen = () => {
         view={lastView}
         components={{ event: CalendarEvent }}
       />
+      <CalendarModal />
     </div>
   );
 };
