@@ -10,11 +10,6 @@ import { messages } from "../../helpers/calendar-msg";
 
 moment.locale("es");
 
-
-
-
-
-
 const localizer = momentLocalizer(moment); // or globalizeLocalizer
 const events = [
   {
@@ -25,6 +20,19 @@ const events = [
 ];
 
 const CalendarScreen = () => {
+  const eventStyleGetter = (event, start, end, isSelected) => {
+    const style = {
+      backgroundColor: "#f0ad4e",
+      borderRadius: "0px",
+      opacity: 0.8,
+      color: "black",
+      border: "0px",
+    };
+    return {
+      style,
+    };
+  };
+
   return (
     <div className="calendar-screen">
       <Navbar />
@@ -34,6 +42,7 @@ const CalendarScreen = () => {
         startAccessor="start"
         endAccessor="end"
         messages={messages}
+        eventPropGetter={eventStyleGetter}
       />
     </div>
   );
