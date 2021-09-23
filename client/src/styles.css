@@ -63,3 +63,11 @@ body {
 .react-datetime-picker__wrapper {
   border: 0px solid !important;
 }
+
+.fab {
+  position: fixed;
+  border-radius: 100%;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 1rem;
+}
