@@ -1,4 +1,4 @@
-import uiTypes from "../types/uiTypes";
+import types from "../types";
 
 const initialState = {
   modalOpen: false,
@@ -6,12 +6,12 @@ const initialState = {
 
 const uiReducer = (state = initialState, { type, payload }) => {
   switch (type) {
-    case uiTypes.openModal:
+    case types.openModal:
       return {
         ...state,
         modalOpen: true,
       };
-    case uiTypes.closeModal:
+    case types.closeModal:
       return {
         ...state,
         modalOpen: false,

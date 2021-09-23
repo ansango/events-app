@@ -12,6 +12,7 @@ import { useState } from "react";
 import CalendarModal from "./CalendarModal";
 import { useDispatch } from "react-redux";
 import { uiOpenModal } from "../../state/actions/ui";
+import { eventSetActive } from "../../state/actions/events";
 
 moment.locale("es");
 
@@ -38,7 +39,7 @@ const CalendarScreen = () => {
   };
 
   const onSelectEvent = (event) => {
-    console.log(event);
+    dispatch(eventSetActive(event));
   };
 
   const onView = (view) => {
