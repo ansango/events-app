@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Modal from "react-modal";
 
 const customStyles = {
@@ -14,13 +15,19 @@ const customStyles = {
 Modal.setAppElement("#root");
 
 const CalendarModal = () => {
+  const [isOpen, setIsOpen] = useState(true);
+  const closeModal = () => {
+    setIsOpen(false);
+  };
+
   return (
     <Modal
-      isOpen={true}
-      //onAfterOpen={afterOpenModal}
-      //onRequestClose={closeModal}
+      isOpen={isOpen}
+      onRequestClose={closeModal}
       style={customStyles}
-      contentLabel="Example Modal"
+      closeTimeoutMS={200}
+      className="modal"
+      overlayClassName="modal-fondo"
     >
       <div>I am a modal</div>
     </Modal>
